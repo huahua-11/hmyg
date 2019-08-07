@@ -1,0 +1,152 @@
+page{
+  padding-bottom: 20rpx;
+}
+.cart-wrap {
+  margin-bottom: 30rpx;
+
+  .cart-wrap-btn {
+    padding: 20rpx 0;
+
+    button {
+      width: 45%;
+    }
+  }
+}
+
+.cart-address {
+  padding: 20rpx;
+  display: flex;
+  font-size: 30rpx;
+  color: #000;
+
+  .address-phone {
+    flex: 1;
+    text-align: right;
+  }
+}
+
+.main {
+  .mian-title {
+    padding: 20rpx;
+    color: #000;
+    font-size: 36rpx;
+    border-top: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc;
+  }
+
+  .mian-content {
+    .mian-item {
+      display: flex;
+      border-bottom: 1rpx solid #ccc;
+      padding: 15rpx 0;
+
+      .content-chk {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        checkbox-group {}
+      }
+
+      .content-img {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        image {
+          width: 80%;
+        }
+      }
+      .content-info {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .info-name {
+          //把多余的字体隐藏掉
+          color: #000;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+        .info-numper {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 20rpx;
+
+          .info-price {
+            color: #ff0000;
+            font-size: 32rpx;
+            font-weight: 600;
+          }
+
+          .info-num {
+            display: flex;
+
+            .info-num-exit {
+              width: 50rpx;
+              height: 50rpx;
+              border: 1rpx solid #ccc;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .num {
+              width: 50rpx;
+              height: 50rpx;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0 10rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.btm-tool {
+  border-top:1rpx solid #ccc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  height: 100rpx;
+  display: flex;
+  width: 100%;
+  .all-check-wrap {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#000;
+    font-size: 34rpx;
+  }
+  .total-price-wrap {
+    flex:5;
+    text-align: right;
+    padding-right: 20rpx;
+    .tltal-price {
+      color:#000;
+      font-size: 34rpx;
+      text {
+        color:#ff0000;
+        // font-size: 34rpx;
+        font-weight: 600;
+      }
+    }
+  }
+  .cart-pay {
+    flex: 3;
+    background: #ff0000;
+    color:#fff;
+    font-size: 34rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,47 @@
+<!--搜索框 -->
+<SearchInput></SearchInput>
+<!-- 分类数据-->
+<view class="cate_container">
+ <!-- 
+    当页面要出现 滚动效果的时候
+    旧版本的小程序 view标签的是无法实现页面滚动
+    overflow:scroll;
+    可以优先使用 scroll-view   也是封装了一些属性 
+    
+   -->
+<!--左边菜单栏 -->
+    <scroll-view scroll-y class="left-menu">
+        <view class="menu-item {{index===currentIndex?'active':''}}"
+        wx:for="{{LeftCateList}}"
+        wx:key="cat_id"
+        data-index="{{index}}"
+        bindtap="handleMenuChang">{{item.cat_name}}
+        </view>
+    </scroll-view>
+<!--右边菜单栏  -->  
+    <scroll-view class="right-content" scroll-y scroll-top="{{scrollTop}}" >
+        <view class="goods"
+        wx:for="{{RightCateList}}"
+        wx:key="item"
+        wx:for-index="index1"
+        wx:for-item="item1">
+            <view class="goods-title">
+                <text class="delimiter">/</text>
+                <text class="goods-name">{{item1.cat_name}}</text>
+                <text class="delimiter">/</text>
+            </view>
+            <view class="goods-list">
+                <navigator
+                wx:for="{{item1.children}}"
+                wx:key="cat_id"
+                wx:for-index="index2"
+                wx:for-item="item2"
+                url="/pages/goods_list/index?cid={{item2.cat_id}}">
+                    <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+                    <view class="goods-cat_name">{{item2.cat_name}}</view>
+                </navigator>      
+            </view>
+        </view>
+    </scroll-view>
+       
+</view>

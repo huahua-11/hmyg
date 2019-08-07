@@ -1,0 +1,36 @@
+.first-tab{
+    .goods-group{
+        display: flex;
+        border: 1rpx solid #ccc;
+        .goods-img-wrap{
+            flex: 1;
+            //图片是行内元素可以使用文字居中，响应式布局居中没有效果
+            text-align: center;
+            padding: 20rpx 0;
+            image{
+                width:70%;
+            }
+        }
+        .goods-info-wrap{
+            flex: 2;
+            display: flex;
+            // column：主轴为垂直方向，起点在上沿。
+            flex-direction: column;
+            // space-around：每个项目两侧的间隔相等
+            justify-content: space-around;
+            .goods-name{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 2; 
+                color: #000;
+                font-size: 30rpx;
+            }
+            .goods-price{
+                color: #eb4450;
+                font-size: 36rpx;
+                font-weight: 600;
+            }
+        }
+    }
+}

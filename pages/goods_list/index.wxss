@@ -1,0 +1,31 @@
+.first-tab .goods-group {
+  display: flex;
+  border: 1rpx solid #ccc;
+}
+.first-tab .goods-group .goods-img-wrap {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.first-tab .goods-group .goods-img-wrap image {
+  width: 70%;
+}
+.first-tab .goods-group .goods-info-wrap {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first-tab .goods-group .goods-info-wrap .goods-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  color: #000;
+  font-size: 30rpx;
+}
+.first-tab .goods-group .goods-info-wrap .goods-price {
+  color: #eb4450;
+  font-size: 36rpx;
+  font-weight: 600;
+}

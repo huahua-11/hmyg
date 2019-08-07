@@ -1,0 +1,95 @@
+// page{
+//     padding-bottom:90rpx;
+// }
+.detail-swiper{
+    swiper{
+        //原图为400x400，100vw = 750rpx  设置原图高宽=swiper
+        height: 55vw;
+        text-align: center;
+        image{
+            width: 50%;
+        }
+    }
+}
+.goods-price{
+    font-size: 36rpx;
+    color:#eb4450;
+    font-weight: 600;
+    padding:20rpx 10rpx;
+}
+.goods-name-wrap{
+    display: flex;
+    padding:10rpx;
+    border-bottom:10rpx solid #eee;
+    .goods-name{
+        flex:4;
+        font-size: 28rpx;
+        // color:#000;
+        //把多余的字体隐藏掉
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; 
+    }
+    .goods-name-icon{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-left: 1rpx solid #bcbcbc;
+        .iconfont{
+            font-size: 40rpx;
+        }
+    }
+}
+.goods-detail{
+    padding-bottom:90rpx;
+    .goods-detail-title{
+        font-size: 30rpx;
+        color:#eb4450;
+        font-weight: 600;
+        padding:20rpx;
+    }
+}
+.tool{
+    display: flex;
+    height: 90rpx;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    border-top: 1rpx solid #d2d2d2;
+    .tool-item{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:#000;
+        position: relative;
+        button{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+    .btn-cart{
+        flex: 2;
+        background: #ffa500;
+        font-size: 28rpx;
+        color: #fff;
+        font-weight: 600;
+    }
+    .btn-buy{
+        flex: 2;
+        background: #eb4450;
+        font-size: 28rpx;
+        font-weight: 600;
+        color: #fff;
+    }
+}

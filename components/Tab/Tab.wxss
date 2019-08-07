@@ -1,0 +1,16 @@
+.tabs .tabs-title{
+  display: flex;
+}
+.tabs .title-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #000;
+  padding: 20rpx 0;
+}
+.tabs .active {
+  color: #eb4450;
+  border-bottom: 5rpx solid #eb4450;
+}

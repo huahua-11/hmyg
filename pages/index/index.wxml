@@ -1,0 +1,48 @@
+<!--pages/index/index.wxml-->
+<SearchInput></SearchInput>
+<!--轮播图开始-->
+<!--
+swiper 标签的高度默认是  150px
+image 标签默认的高端是  240px
+让swiper得高度 变成  和图片的高度一样
+原图宽  /  原图高   =  变化后的宽    /   变化后的高
+750px  /   340px   750rpx   /   ?
+-->
+<view class="index-swiper">
+    <swiper indicator-dots autoplay circular>
+        <swiper-item 
+        wx:for="{{swiperList}}"
+        wx:key="goods_id">
+            <navigator><image mode="widthFix" src="{{item.image_src}}"/></navigator>
+        </swiper-item>      
+    </swiper>
+</view>
+<!--分类导航-->
+<view class="index-cates">
+    <navigator
+    wx:for="{{navCateList}}"
+    wx:key="name">
+        <image mode="widthFix" src="{{item.image_src}}"/>
+    </navigator>
+</view>
+<!--楼层数组-->
+<view class="index-floor">
+    <view class="floor-item"
+    wx:for="{{floorList}}"
+    wx:for-index="index1"
+    wx:for-item="item1"
+    wx:key="item">
+        <view>
+            <image mode="widthFix" src="{{item1.floor_title.image_src}}"/>
+        </view>
+        <view class="floor-list">
+            <navigator
+            wx:for="{{item1.product_list}}"
+            wx:for-index="index2"
+            wx:for-item="item2"
+            wx:key="name"
+            ><image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"/>
+            </navigator>
+        </view>
+    </view>
+</view>

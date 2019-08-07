@@ -1,0 +1,58 @@
+.cate_container {
+  /* 高度 等于 视口的高度 - 头部的高度
+    calc 100vh 
+    不要less来编译 calc中的代码 */
+  height: calc(100vh - 90rpx);
+  display: flex;
+  /* 左菜单 */
+  /* 右菜单 */
+}
+.cate_container .left-menu {
+  /* 子项 高度默认等于父项的高度 */
+  flex: 1;
+  background: #f4f4f4;
+}
+.cate_container .left-menu .menu-item {
+  color: #000;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.cate_container .left-menu .active {
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
+.cate_container .right-content {
+  flex: 3;
+}
+.cate_container .right-content .goods .goods-title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cate_container .right-content .goods .goods-title .delimiter {
+  color: #ccc;
+}
+.cate_container .right-content .goods .goods-title .goods-name {
+  color: #000;
+  font-size: 30rpx;
+  padding: 0 30rpx;
+}
+.cate_container .right-content .goods .goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cate_container .right-content .goods .goods-list navigator {
+  width: 33.33%;
+  text-align: center;
+}
+.cate_container .right-content .goods .goods-list navigator image {
+  width: 50%;
+}
+.cate_container .right-content .goods .goods-list navigator .goods-cat_name {
+  color: #000;
+  font-size: 25rpx;
+}
