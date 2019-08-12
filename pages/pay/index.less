@@ -1,0 +1,102 @@
+page {
+    padding-bottom: 90rpx;
+}
+
+.cart-wrap {
+    margin-bottom: 30rpx;
+
+    .cart-wrap-btn {
+        padding: 20rpx 0;
+
+        button {
+            width: 45%;
+        }
+    }
+}
+.main {
+    .mian-title {
+        padding:20rpx;
+        color: #eb4450;
+        font-size: 36rpx;
+        border-top: 1rpx solid #ccc;
+        border-bottom: 1rpx solid #ccc;
+    }
+    .mian-content {
+        .mian-item {
+            display: flex;
+            border-bottom: 1rpx solid #ccc;
+            padding: 1rpx;
+            .content-img {
+                flex:1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    widows: 80%;
+                }
+            }
+            .content-info {
+                flex:2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .info-name {
+                    //把多余的字体隐藏掉
+                    color: #000;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
+                .info-numper {
+                    display: flex;
+                    justify-content: space-between;
+                    padding:0 20rpx;
+                    .info-price {
+                        color: #ff0000;
+                        font-size: 32rpx;
+                        font-weight: 600;
+                    }
+                    .info-num {
+                    color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+.btm-tool {
+    border-top:1rpx solid #ccc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    height: 100rpx;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .total-price-wrap {
+        text-align: right;
+        padding-right: 20rpx;
+        .tltal-price {
+            color:#000;
+            font-size: 34rpx;
+            text {
+                color:#ff0000;
+                // font-size: 34rpx;
+                font-weight: 600;
+            }
+        }
+    }
+    .cart-pay {
+        flex: 1/3;
+        background: #ff0000;
+        color:#fff;
+        font-size: 34rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}

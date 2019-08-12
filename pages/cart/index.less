@@ -1,55 +1,54 @@
 page{
-  padding-bottom: 20rpx;
+  padding-bottom: 90rpx;
 }
-.cart-wrap {
-  margin-bottom: 30rpx;
-
-  .cart-wrap-btn {
+.revice_wrap {
+  .revice_btn_wrap {
     padding: 20rpx 0;
-
     button {
-      width: 45%;
+      width: 50%;
+    }
+  }
+  .revice_address {
+    display: flex;
+    padding: 20rpx;
+    color: #000;
+    font-size: 30rpx;
+    .revice_user {
+    }
+    .revice_phone {
+      text-align: right;
+      flex: 1;
     }
   }
 }
 
-.cart-address {
-  padding: 20rpx;
-  display: flex;
-  font-size: 30rpx;
-  color: #000;
-
-  .address-phone {
-    flex: 1;
-    text-align: right;
-  }
-}
-
-.main {
-  .mian-title {
-    padding: 20rpx;
-    color: #000;
+.cart_main {
+  .cart_main_title {
+    padding: 20rpx 10rpx;
+    color: var(--themeColor);
     font-size: 36rpx;
-    border-top: 1rpx solid #ccc;
-    border-bottom: 1rpx solid #ccc;
+    font-weight: 600;
+    border-top: 1rpx solid currentColor;
+    border-bottom: 1rpx solid currentColor;
   }
 
-  .mian-content {
-    .mian-item {
+  .cart_main_content {
+    .cart_item {
       display: flex;
-      border-bottom: 1rpx solid #ccc;
       padding: 15rpx 0;
-
-      .content-chk {
+      border-bottom: 1rpx solid #ccc;
+      .cart_chk_wrap {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        checkbox-group {}
+        checkbox-group {
+          checkbox {
+          }
+        }
       }
 
-      .content-img {
+      .cart_img_wrap {
         flex: 2;
         display: flex;
         justify-content: center;
@@ -58,34 +57,32 @@ page{
           width: 80%;
         }
       }
-      .content-info {
+
+      .cart_info {
         flex: 4;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        .info-name {
-          //把多余的字体隐藏掉
-          color: #000;
+        .goods_name {
           display: -webkit-box;
           overflow: hidden;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp:2;
         }
-        .info-numper {
+
+        .goods_price_wrap {
           display: flex;
           justify-content: space-between;
           padding: 0 20rpx;
-
-          .info-price {
-            color: #ff0000;
+          .goods_price {
+            color: var(--themeColor);
             font-size: 32rpx;
             font-weight: 600;
           }
 
-          .info-num {
+          .cart_tool {
             display: flex;
-
-            .info-num-exit {
+            .cart_num_edit {
               width: 50rpx;
               height: 50rpx;
               border: 1rpx solid #ccc;
@@ -94,13 +91,14 @@ page{
               align-items: center;
             }
 
-            .num {
+            .cart_num {
               width: 50rpx;
               height: 50rpx;
               display: flex;
               justify-content: center;
               align-items: center;
-              margin: 0 10rpx;
+
+              margin: 0 15rpx;
             }
           }
         }
@@ -108,45 +106,54 @@ page{
     }
   }
 }
-.btm-tool {
-  border-top:1rpx solid #ccc;
+
+
+.btm_tool {
+  border-top: 1rpx solid #ccc;
   position: fixed;
   left: 0;
   bottom: 0;
-  background: #fff;
-  height: 100rpx;
-  display: flex;
   width: 100%;
-  .all-check-wrap {
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  .all_check_wrap {
     flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:#000;
-    font-size: 34rpx;
-  }
-  .total-price-wrap {
-    flex:5;
-    text-align: right;
-    padding-right: 20rpx;
-    .tltal-price {
-      color:#000;
-      font-size: 34rpx;
-      text {
-        color:#ff0000;
-        // font-size: 34rpx;
-        font-weight: 600;
+    checkbox-group {
+      checkbox {
+
       }
     }
   }
-  .cart-pay {
-    flex: 3;
-    background: #ff0000;
-    color:#fff;
-    font-size: 34rpx;
+
+  .total_price_wrap {
+    flex: 5;
+    text-align: right;
+    padding-right: 20rpx;
+    .total_price {
+      text {
+        color: var(--themeColor);
+        font-size: 34rpx;
+        font-weight: 600;
+      }
+    }
+
+    .freight_tips {
+
+    }
+  }
+
+  .cart_pay {
+    flex: 2;
+    background-color: var(--themeColor);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 34rpx;
     font-weight: 600;
   }
 }

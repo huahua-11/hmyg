@@ -1,66 +1,34 @@
-// pages/user/index.js
+/* 1 页面打开的时候 判断  有没有用户的信息
+      1.没有信息就跳转到login 登录页面  去获取拥护信息 
+        1.信息获取到  存入缓存中
+        2.在跳转回来
+*/
+import { getStorageUserInfo } from "../../utils/storage.js"    
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userinfo:{},
+    // 收藏的商品的数量
+    collectLegnth:0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 打开页面就会加载
+  onShow(){
+    // 1.获取存储中的用户信息
+    const userinfo = getStorageUserInfo();
+    // 判断有没有存在用户信息
+    // 跳转到login 登录页面  去获取拥护信息
+    if(!userinfo){
+      wx.navigateTo({
+        url: "pages/login/index",
+      });
+      return;
+    }
+    // 2.给data赋值
+    const collect = wx.getStorageSync("collect")||[];
+    this.setData({
+      userinfo,
+      collectLegnth:collect.length
+    })
+      
   }
-})
+});
+  

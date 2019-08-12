@@ -1,2 +1,2 @@
-<!--pages/login/index.wxml-->
-<text>pages/login/index.wxml</text>
+<!--用户登录-->
+<button type="warn" open-type="userinfo"></button>
